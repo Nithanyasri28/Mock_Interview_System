@@ -1,1 +1,16 @@
 
+services:
+  - type: web
+    name: careerpilot-backend
+    runtime: docker
+    rootDir: CareerPilot/backend/backend/backend
+    plan: free
+    dockerfilePath: ./Dockerfile
+
+  - type: web
+    name: careerpilot-frontend
+    runtime: static
+    rootDir: CareerPilot/frontend/vite-project
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+
