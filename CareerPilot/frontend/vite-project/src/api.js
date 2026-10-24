@@ -10,7 +10,7 @@ export const setToken = (token) => window.localStorage.setItem(TOKEN_KEY, token)
 export const clearToken = () => window.localStorage.removeItem(TOKEN_KEY)
 
 const http = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '',
+  baseURL: "https://backend-mis-7pnu.onrender.com",
   timeout: 20000,
 })
 
